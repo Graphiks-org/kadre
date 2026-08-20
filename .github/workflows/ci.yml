@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-26 # Xcode 26 is required by Compose Multiplatform 1.11.1 for the iOS link
+    runs-on: macos-26
     
     steps:
       - name: Checkout Code

@@ -122,7 +122,7 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/).
 
 **Examples:**
 ```
-feat(kadre): add caching layer to PlatformRepository
+feat(kadre): add a new library capability
 fix(buildSrc): resolve AGP compatibility issue
 docs: update README with new badges
 ```

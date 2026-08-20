@@ -39,5 +39,5 @@ API générées en local ou via le site publié :
 
 - Dépôt : <https://github.com/Graphiks-org/kadre>
 - Site de documentation : <https://graphiks-org.github.io/kadre/>
-- Guide de contribution : [CONTRIBUTING.md](../../CONTRIBUTING.md)
-- Support : [SUPPORT.fr.md](../../SUPPORT.fr.md)
+- Guide de contribution : [CONTRIBUTING.md](https://github.com/Graphiks-org/kadre/blob/master/CONTRIBUTING.md)
+- Support : [SUPPORT.fr.md](https://github.com/Graphiks-org/kadre/blob/master/SUPPORT.fr.md)

@@ -38,5 +38,5 @@ pages locally or through the published site at
 
 - Repository: <https://github.com/Graphiks-org/kadre>
 - Documentation site: <https://graphiks-org.github.io/kadre/>
-- Contributing guide: [CONTRIBUTING.md](../../CONTRIBUTING.md)
-- Support: [SUPPORT.md](../../SUPPORT.md)
+- Contributing guide: [CONTRIBUTING.md](https://github.com/Graphiks-org/kadre/blob/master/CONTRIBUTING.md)
+- Support: [SUPPORT.md](https://github.com/Graphiks-org/kadre/blob/master/SUPPORT.md)

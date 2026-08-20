@@ -28,9 +28,9 @@ Embed the Dokka output into MkDocs:
 
 ## 4. Review what changed
 
-- Read [README.md](../../README.md) for the current library summary.
-- Read [SUPPORT.md](../../SUPPORT.md) for user-facing help channels.
-- Read [CHANGELOG.md](../../CHANGELOG.md) for release history and pending work.
+- Read the [README.md](https://github.com/Graphiks-org/kadre/blob/master/README.md) for the current library summary.
+- Read [SUPPORT.md](https://github.com/Graphiks-org/kadre/blob/master/SUPPORT.md) for user-facing help channels.
+- Read [CHANGELOG.md](https://github.com/Graphiks-org/kadre/blob/master/CHANGELOG.md) for release history and pending work.
 
 ## 5. Before opening a contribution
 
