@@ -1,34 +1,41 @@
 # Assistance
 
-## Canaux de Support
+## Canaux de support
 
-### 📖 Documentation
-Consultez d'abord notre documentation :
-- [Documentation en ligne](https://ygdrasil-io.github.io/project-template/)
+### Documentation
 
-### 🐞 Issues GitHub
+Commencez par la documentation du projet :
+
+- [Site de documentation](https://graphiks-org.github.io/kadre/)
+
+### GitHub Issues
+
 Utilisez GitHub Issues pour :
-- Rapports de bug
-- Demandes de fonctionnalités
-- Questions techniques
 
-https://github.com/ygdrasil-io/project-template/issues
+- les rapports de bug
+- les demandes de fonctionnalité
+- les questions techniques liées à l’état actuel du dépôt
 
-### 💬 Discussions GitHub
+https://github.com/Graphiks-org/kadre/issues
+
+### GitHub Discussions
+
 Utilisez GitHub Discussions pour :
-- Questions générales
-- Idées et suggestions
-- Retours d'expérience
 
-https://github.com/ygdrasil-io/project-template/discussions
+- les questions générales
+- les idées et suggestions de conception
+- les retours de la communauté sur la fondation de la bibliothèque
 
-### 📧 Email
-Pour les questions sensibles :
+https://github.com/Graphiks-org/kadre/discussions
+
+### Email
+
+Pour les demandes sensibles :
 [contact@ygdrasil.com](mailto:contact@ygdrasil.com)
 
-## Avant d'Ouvrir une Issue
+## Avant d’ouvrir une issue
 
-1. Vérifiez la documentation existante
-2. Cherchez si une issue similaire n'existe pas déjà
-3. Utilisez le bon template (bug vs feature)
-4. Fournissez autant d'informations que possible
+1. Vérifiez d’abord le site de documentation.
+2. Recherchez une issue ou une discussion existante.
+3. Utilisez le template adapté.
+4. Fournissez des étapes de reproduction ou la commande exacte en échec si utile.

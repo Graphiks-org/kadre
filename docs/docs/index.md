@@ -1,54 +1,42 @@
-# Welcome to the KMP Starter Pack Documentation
+# kadre documentation
 
-This site centralizes all technical documentation, architecture guidelines, and API references for the **Kotlin Multiplatform (KMP) Starter Pack**.
+`kadre` is a Kotlin Multiplatform library for the Graphiks ecosystem.
+This repository is being prepared as a reusable library foundation with a
+published API, contributor guides, and generated reference documentation.
 
----
+## Current status
 
-## 🚀 Key Features
+The project is in foundation setup. The goal is to stabilize the module
+layout, documentation, publication metadata, and contributor workflow before
+expanding the runtime surface.
 
-*   **Complete Multiplatform Support**: Code sharing targeting **Android**, **iOS**, and **Desktop (JVM)**.
-*   **Guided Architecture (Clean Architecture / DDD)**: Strict separation of business logic (Domain), infrastructure (Data), and user interface (Presentation).
-*   **Modern Tech Stack**: **Kotlin 2.4.0**, **Gradle 9.5.0**, **AGP 9.0.0**, and **Java 25**.
-*   **Conditional Continuous Integration**: A double-speed CI/CD workflow (10-second JVM Fast-Track vs full Deep-Testing suite before merging into `master`).
-*   **API Documentation Engine**: Automated API doc generation via **Dokka v2** and beautiful rendering through **MkDocs Material**.
+## Supported targets
 
----
+- JVM (Java 25)
+- Android (minSdk 24)
+- iOS arm64
+- iOS Simulator arm64
 
-## 🧱 Architectural Organization of the Project
+## Local development commands
 
-The shared module `:shared` strictly follows the guidelines of the **Kotlin Architect** skill:
+Use these commands from the repository root:
 
-1.  **Domain Layer**:
-    *   Written in pure Kotlin (zero external framework dependencies).
-    *   Contains self-contained UseCases modeling distinct business features.
-    *   Robust, self-validating data models (using inline `value class` patterns).
-2.  **Data Layer**:
-    *   Repository implementations and low-level communication (networking via Ktor, database/persistence).
-    *   Transparent Flow exception handling (ensuring `AbortFlowException` is never caught by accident).
-3.  **Presentation Layer**:
-    *   Reactive user interface driven by immutable `StateFlow` structures.
-    *   Properly managed coroutine scopes and decoupled ViewModels.
-
----
-
-## 💻 Useful Commands
-
-### Run tests (Fast-Track JVM)
 ```bash
-./gradlew :shared:jvmTest
-```
-
-### Run all tests (All Platforms)
-```bash
-./gradlew allTests
-```
-
-### Generate and embed API documentation locally (Dokka → MkDocs)
-```bash
+./gradlew :kadre:jvmTest
+./gradlew build
 ./gradlew :docs:embedDokkaIntoMkDocs
 ```
 
-### Compile the MkDocs site locally
-```bash
-mkdocs build -f docs/mkdocs.yml
-```
+## API reference
+
+The API reference is generated with Dokka and embedded into this MkDocs site.
+After running `./gradlew :docs:embedDokkaIntoMkDocs`, browse the generated API
+pages locally or through the published site at
+<https://graphiks-org.github.io/kadre/>.
+
+## Project links
+
+- Repository: <https://github.com/Graphiks-org/kadre>
+- Documentation site: <https://graphiks-org.github.io/kadre/>
+- Contributing guide: [CONTRIBUTING.md](../../CONTRIBUTING.md)
+- Support: [SUPPORT.md](../../SUPPORT.md)
