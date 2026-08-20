@@ -94,7 +94,7 @@ class ValidatePrPolicyTests(unittest.TestCase):
             "\n".join(
                 [
                     'allowed_types = ["feat", "fix", "build", "chore", "ci", "docs", "perf", "refactor", "test", "style"]',
-                    'allowed_scopes = ["shared", "buildSrc", "docs", "release"]',
+                    'allowed_scopes = ["kadre", "buildSrc", "docs", "release"]',
                     'branch_prefixes = ["feat/", "fix/", "chore/"]',
                     'changelog_files = ["CHANGELOG.md"]',
                     'required_sections = ["Description", "Type of Change", "Checklist", "Screenshots (if applicable)", "Additional Notes"]',
@@ -140,11 +140,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_valid_pr_passes(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(selected_type="feat", changelog_state="updated", documentation_updated=False),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation", "docs: update release notes"],
+            commit_subjects=["feat(kadre): add policy validation", "docs: update release notes"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -156,7 +156,7 @@ class ValidatePrPolicyTests(unittest.TestCase):
             body=make_body(),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -164,11 +164,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_invalid_branch_is_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(),
             branch="main/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -205,11 +205,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
             ]
         )
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=body,
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -217,11 +217,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_two_selected_change_types_are_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(selected_types=["feat", "docs"]),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -229,11 +229,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_missing_changelog_file_is_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(changelog_state="updated"),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -241,11 +241,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_no_changelog_without_justification_is_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(changelog_state="no", changelog_reason=""),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -253,11 +253,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_docs_changes_require_documentation_decision(self) -> None:
         errors = self.validate(
-            title="docs(shared): update user guide",
+            title="docs(kadre): update user guide",
             body=make_body(selected_type="docs", changelog_state="no", changelog_reason="documentation only"),
             branch="chore/update-guide",
             changed_files=["docs/guide.md"],
-            commit_subjects=["docs(shared): update user guide"],
+            commit_subjects=["docs(kadre): update user guide"],
             base_ancestor=True,
             merge_commits=0,
         )
@@ -265,7 +265,7 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_non_conventional_commit_subject_is_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
@@ -277,11 +277,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_non_ancestor_base_is_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=False,
             merge_commits=0,
         )
@@ -289,11 +289,11 @@ class ValidatePrPolicyTests(unittest.TestCase):
 
     def test_merge_commits_are_rejected(self) -> None:
         errors = self.validate(
-            title="feat(shared): add policy validation",
+            title="feat(kadre): add policy validation",
             body=make_body(),
             branch="feat/add-policy-validation",
             changed_files=["src/main.py", "CHANGELOG.md"],
-            commit_subjects=["feat(shared): add policy validation"],
+            commit_subjects=["feat(kadre): add policy validation"],
             base_ancestor=True,
             merge_commits=1,
         )
