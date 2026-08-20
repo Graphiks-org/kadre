@@ -22,7 +22,7 @@ kotlin {
 extensions.configure<KotlinMultiplatformAndroidComponentsExtension> {
     finalizeDsl(
         org.gradle.api.Action<com.android.build.api.dsl.KotlinMultiplatformAndroidLibraryExtension> {
-            namespace = "io.ygdrasil.shared"
+            namespace = "org.graphiks.kadre"
             compileSdk = 37
             minSdk = 24
         }

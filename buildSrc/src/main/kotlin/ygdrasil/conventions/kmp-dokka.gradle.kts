@@ -7,11 +7,11 @@ plugins {
 }
 
 dokka {
-    moduleName.set("shared")
+    moduleName.set("kadre")
     dokkaSourceSets.configureEach {
         sourceLink {
             localDirectory.set(project.file("src/commonMain/kotlin"))
-            remoteUrl.set(URI("https://github.com/ygdrasil-io/project-template/blob/master/shared/src/commonMain/kotlin"))
+            remoteUrl.set(URI("https://github.com/Graphiks-org/kadre/blob/master/kadre/src/commonMain/kotlin"))
             remoteLineSuffix.set("#L")
         }
     }
