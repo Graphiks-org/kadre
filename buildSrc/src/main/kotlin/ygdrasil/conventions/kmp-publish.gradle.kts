@@ -4,9 +4,8 @@ plugins {
     id("com.vanniktech.maven.publish")
 }
 
-group = "org.graphiks"
+group = "io.ygdrasil.shared"
 version = (project.findProperty("releaseVersion") as? String)
-    ?.trim()
     ?.takeIf { it.isNotBlank() }
     ?: "1.0.0-SNAPSHOT"
 
