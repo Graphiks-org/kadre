@@ -1,4 +1,9 @@
-group = "io.ygdrasil.shared"
-version = (project.findProperty("releaseVersion") as? String)
-    ?.takeIf { it.isNotBlank() }
-    ?: "1.0.0-SNAPSHOT"
+group = "org.graphiks"
+
+allprojects {
+    group = "org.graphiks"
+    version = (rootProject.findProperty("releaseVersion") as? String)
+        ?.trim()
+        ?.takeIf { it.isNotBlank() }
+        ?: "1.0.0-SNAPSHOT"
+}

@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kmp-starter-pack"
-include(":shared")
+rootProject.name = "kadre-root"
+include(":kadre")
 include(":docs")

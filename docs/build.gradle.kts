@@ -5,10 +5,10 @@ plugins {
 }
 
 val copySharedDokkaIntoMkDocs by tasks.registering(Sync::class) {
-    dependsOn(project(":shared").tasks.named("dokkaGenerateModuleMkdocs"))
+    dependsOn(project(":kadre").tasks.named("dokkaGenerateModuleMkdocs"))
     dependsOn(tasks.named("dokkaCopyIntoMkDocs"))
 
-    from(project(":shared").layout.buildDirectory.dir("dokka-module/mkdocs/module"))
+    from(project(":kadre").layout.buildDirectory.dir("dokka-module/mkdocs/module"))
     into(layout.projectDirectory.dir("docs/api/shared"))
 }
 
