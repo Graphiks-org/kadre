@@ -9,6 +9,26 @@
 [![Contributing](https://img.shields.io/badge/Contributing-guide-purple)](CONTRIBUTING.md)
 [![Project: Incubating](https://img.shields.io/badge/Status-Incubating-orange)](https://github.com/Graphiks-org/kadre)
 
+<!-- ==========================================
+     BADGES DE STATUT DE PROJET PERSONNALISABLES
+     Décommentez un seul badge lorsque le statut du projet évolue.
+     ========================================== -->
+
+<!-- STATUT : EN PLANIFICATION (PLANNING) -->
+<!-- [![Project: Planning](https://img.shields.io/badge/Status-Planning-blue)](https://github.com/Graphiks-org/kadre) -->
+
+<!-- STATUT : INCUBATION / EN DÉVELOPPEMENT (INCUBATING) -->
+<!-- [![Project: Incubating](https://img.shields.io/badge/Status-Incubating-orange)](https://github.com/Graphiks-org/kadre) -->
+
+<!-- STATUT : STABLE / PRÊT PRODUCTION (STABLE) -->
+<!-- [![Project: Stable](https://img.shields.io/badge/Status-Stable-green)](https://github.com/Graphiks-org/kadre) -->
+
+<!-- STATUT : DÉPRÉCIÉ (DEPRECATED) -->
+<!-- [![Project: Deprecated](https://img.shields.io/badge/Status-Deprecated-red)](https://github.com/Graphiks-org/kadre) -->
+
+<!-- STATUT : ARCHIVÉ (ARCHIVED) -->
+<!-- [![Project: Archived](https://img.shields.io/badge/Status-Archived-lightgrey)](https://github.com/Graphiks-org/kadre) -->
+
 `kadre` is a Kotlin Multiplatform library foundation for the Graphiks
 ecosystem. The repository currently provides the standalone Gradle module,
 publication metadata, API documentation pipeline, and contributor workflow
