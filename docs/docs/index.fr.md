@@ -1,54 +1,43 @@
-# Bienvenue sur la Documentation du KMP Starter Pack
+# Documentation kadre
 
-Ce site regroupe l'ensemble des documentations techniques, des guides d'architecture et de la référence API du **Starter Pack Kotlin Multiplatform (KMP)**.
+`kadre` est une bibliothèque Kotlin Multiplatform pour l’écosystème Graphiks.
+Ce dépôt est en cours de préparation comme fondation réutilisable, avec une
+API publiée, des guides pour les contributrices et contributeurs, ainsi qu’une
+référence générée.
 
----
+## Statut actuel
 
-## 🚀 Fonctionnalités Clés
+Le projet est en phase de mise en place de sa fondation. L’objectif est de
+stabiliser la structure du module, la documentation, les métadonnées de
+publication et le workflow de contribution avant d’élargir la surface runtime.
 
-*   **Multiplateforme Complet** : Partage de code ciblant **Android**, **iOS** et **Desktop (JVM)**.
-*   **Architecture Guidée (Clean Architecture / DDD)** : Séparation stricte de la logique métier (Domaine), de l'infrastructure (Données) et de l'interface (Présentation).
-*   **Pile Technique Moderne** : **Kotlin 2.4.0**, **Gradle 9.5.0**, **AGP 9.0.0** et **Java 25**.
-*   **Intégration Continue Conditionnelle** : Un workflow CI/CD à double-vitesse (JVM Fast-Track de 10 secondes vs Deep-Testing complet avant merge sur `master`).
-*   **Moteur de Documentation API** : Génération automatisée de la documentation d'API via **Dokka v2** et rendu via **MkDocs Material**.
+## Cibles prises en charge
 
----
+- JVM (Java 25)
+- Android (minSdk 24)
+- iOS arm64
+- iOS Simulator arm64
 
-## 🧱 Organisation Architecturales du Projet
+## Commandes de développement local
 
-Le module partagé `:shared` suit les directives fournies par le skill **Architecte Kotlin** :
+À exécuter depuis la racine du dépôt :
 
-1.  **Couche Domaine (Domain)** :
-    *   Écrite en Kotlin pur (sans dépendance).
-    *   Contient les UseCases autonomes modélisant les cas d'utilisation métier.
-    *   Modèles de données robustes auto-validés (utilisation de `value class` inline).
-2.  **Couche Données (Data)** :
-    *   Implémentation des dépôts et communication de bas niveau (réseau via Ktor, persistance).
-    *   Gestion d'exceptions Flow transparente (garantissant que `AbortFlowException` n'est pas intercepté accidentellement).
-3.  **Couche Présentation (Presentation)** :
-    *   Interface réactive basée sur des `StateFlow` immuables.
-    *   Scopes coroutines proprement gérés et ViewModels autonomes.
-
----
-
-## 💻 Commandes Utiles
-
-### Exécuter la suite de tests (Fast-Track JVM)
 ```bash
-./gradlew :shared:jvmTest
-```
-
-### Lancer tous les tests (Toutes cibles)
-```bash
-./gradlew allTests
-```
-
-### Générer et intégrer localement la documentation de l'API (Dokka → MkDocs)
-```bash
+./gradlew :kadre:jvmTest
+./gradlew build
 ./gradlew :docs:embedDokkaIntoMkDocs
 ```
 
-### Compiler localement le site MkDocs
-```bash
-mkdocs build -f docs/mkdocs.yml
-```
+## Référence API
+
+La référence API est générée avec Dokka puis intégrée dans ce site MkDocs.
+Après `./gradlew :docs:embedDokkaIntoMkDocs`, vous pouvez consulter les pages
+API générées en local ou via le site publié :
+<https://graphiks-org.github.io/kadre/>.
+
+## Liens du projet
+
+- Dépôt : <https://github.com/Graphiks-org/kadre>
+- Site de documentation : <https://graphiks-org.github.io/kadre/>
+- Guide de contribution : [CONTRIBUTING.md](https://github.com/Graphiks-org/kadre/blob/master/CONTRIBUTING.md)
+- Support : [SUPPORT.fr.md](https://github.com/Graphiks-org/kadre/blob/master/SUPPORT.fr.md)

@@ -1,4 +1,4 @@
-name: KMP Starter Pack CI
+name: Kadre CI
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-26 # Xcode 26 is required by Compose Multiplatform 1.11.1 for the iOS link
+    runs-on: macos-26
     
     steps:
       - name: Checkout Code
@@ -43,7 +43,7 @@ jobs:
       # Runs when neither the PR base nor the current branch is 'master'
       - name: Run JVM Fast-Track Tests
         if: steps.test-strategy.outputs.strategy == 'fast-track'
-        run: ./gradlew :shared:jvmTest --no-daemon --stacktrace
+        run: ./gradlew :kadre:jvmTest --no-daemon --stacktrace
 
       # Step 3: Run Deep tests (JVM, Android, and iOS Simulator/Link)
       # Runs only for pushes to or pull requests targeting 'master'

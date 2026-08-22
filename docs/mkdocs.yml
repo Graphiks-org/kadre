@@ -1,8 +1,8 @@
-site_name: KMP Starter Pack
-site_description: API & Technical Documentation for KMP Starter Pack
-site_url: https://ygdrasil-io.github.io/project-template/
-repo_url: https://github.com/ygdrasil-io/project-template
-repo_name: ygdrasil-io/project-template
+site_name: kadre
+site_description: API and contributor documentation for kadre
+site_url: https://graphiks-org.github.io/kadre/
+repo_url: https://github.com/Graphiks-org/kadre
+repo_name: Graphiks-org/kadre
 
 docs_dir: docs
 site_dir: ../_site
@@ -64,5 +64,5 @@ plugins:
         - locale: fr
           name: Français
           build: true
-          site_name: Starter Pack KMP
-          site_description: Documentation Technique pour KMP Starter Pack
+          site_name: kadre
+          site_description: Documentation API et contribution pour kadre
